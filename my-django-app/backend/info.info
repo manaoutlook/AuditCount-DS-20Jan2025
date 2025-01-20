@@ -1,0 +1,16 @@
+CREATE USER zuser WITH PASSWORD 'znew_password';
+CREATE DATABASE zcarinv;
+GRANT ALL PRIVILEGES ON DATABASE zcarinv TO zuser;
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'zcarinv',
+        'USER': 'zuser',
+        'PASSWORD': 'znew_password',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+
+
